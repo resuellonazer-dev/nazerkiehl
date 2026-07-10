@@ -1,21 +1,21 @@
 // Smooth scroll for navigation links
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function (e) {
         e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(this.getAttribute("href"));
 
         if (target) {
             target.scrollIntoView({
-                behavior: 'smooth'
+                behavior: "smooth"
             });
         }
     });
 });
 
 // Header background on scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
 
     if (window.scrollY > 50) {
         header.style.background = "#111319";
@@ -46,7 +46,7 @@ function reveal() {
 revealElements.forEach(section => {
     section.style.opacity = "0";
     section.style.transform = "translateY(50px)";
-    section.style.transition = "all .8s ease";
+    section.style.transition = "all 0.8s ease";
 });
 
 window.addEventListener("scroll", reveal);
@@ -56,7 +56,7 @@ window.addEventListener("load", reveal);
 const form = document.querySelector("form");
 
 if (form) {
-    form.addEventListener("submit", function(e) {
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
         alert("Thank you! Your message has been sent.");
         form.reset();
@@ -80,5 +80,5 @@ cards.forEach(card => {
 const footer = document.querySelector("footer p");
 
 if (footer) {
-    footer.innerHTML = © ${new Date().getFullYear()} Your Name. All Rights Reserved.;
+    footer.innerHTML = '© ${new Date().getFullYear()} Nazer. All Rights Reserved.';
 }
